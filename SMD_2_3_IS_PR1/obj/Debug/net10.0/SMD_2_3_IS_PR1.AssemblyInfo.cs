@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SMD_2_3_IS_PR1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f2252241d01391613c2735c90208626772119fe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d0dd05ef00f550f694f1dcd1d813d53a9f6b089e")]
 [assembly: System.Reflection.AssemblyProductAttribute("SMD_2_3_IS_PR1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SMD_2_3_IS_PR1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
