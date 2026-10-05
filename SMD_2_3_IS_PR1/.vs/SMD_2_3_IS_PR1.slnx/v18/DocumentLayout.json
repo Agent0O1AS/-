@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ASUS\\Desktop\\-\\SMD_2_3_IS_PR1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CA8890EC-3E3A-C50A-EEEB-7F6439854D53}|SMD_2_3_IS_PR1\\SMD_2_3_IS_PR1.csproj|c:\\users\\asus\\desktop\\-\\smd_2_3_is_pr1\\smd_2_3_is_pr1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA8890EC-3E3A-C50A-EEEB-7F6439854D53}|SMD_2_3_IS_PR1\\SMD_2_3_IS_PR1.csproj|solutionrelative:smd_2_3_is_pr1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA8890EC-3E3A-C50A-EEEB-7F6439854D53}|SMD_2_3_IS_PR1\\SMD_2_3_IS_PR1.csproj|c:\\users\\asus\\desktop\\-\\smd_2_3_is_pr1\\smd_2_3_is_pr1\\income.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA8890EC-3E3A-C50A-EEEB-7F6439854D53}|SMD_2_3_IS_PR1\\SMD_2_3_IS_PR1.csproj|solutionrelative:smd_2_3_is_pr1\\income.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA8890EC-3E3A-C50A-EEEB-7F6439854D53}|SMD_2_3_IS_PR1\\SMD_2_3_IS_PR1.csproj|c:\\users\\asus\\desktop\\-\\smd_2_3_is_pr1\\smd_2_3_is_pr1\\tochka.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA8890EC-3E3A-C50A-EEEB-7F6439854D53}|SMD_2_3_IS_PR1\\SMD_2_3_IS_PR1.csproj|solutionrelative:smd_2_3_is_pr1\\tochka.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\-\\SMD_2_3_IS_PR1\\SMD_2_3_IS_PR1\\Program.cs",
+              "RelativeDocumentMoniker": "SMD_2_3_IS_PR1\\Program.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\-\\SMD_2_3_IS_PR1\\SMD_2_3_IS_PR1\\Program.cs",
+              "RelativeToolTip": "SMD_2_3_IS_PR1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-14T10:40:24.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Income.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\-\\SMD_2_3_IS_PR1\\SMD_2_3_IS_PR1\\Income.cs",
+              "RelativeDocumentMoniker": "SMD_2_3_IS_PR1\\Income.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\-\\SMD_2_3_IS_PR1\\SMD_2_3_IS_PR1\\Income.cs",
+              "RelativeToolTip": "SMD_2_3_IS_PR1\\Income.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-14T11:51:27.597Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Tochka.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\-\\SMD_2_3_IS_PR1\\SMD_2_3_IS_PR1\\Tochka.cs",
+              "RelativeDocumentMoniker": "SMD_2_3_IS_PR1\\Tochka.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\-\\SMD_2_3_IS_PR1\\SMD_2_3_IS_PR1\\Tochka.cs",
+              "RelativeToolTip": "SMD_2_3_IS_PR1\\Tochka.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-14T13:02:36.711Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
