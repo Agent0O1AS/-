@@ -19,7 +19,7 @@ namespace SMD_2_3_IS_PR1
                 {
                     break;
                 }
-                Console.Write("Введите доходы: ");
+                Console.Write("- Введите доходы: ");
                 line = Convert.ToString(Console.ReadLine());
 
                 string[] lines = Spliter(line);
@@ -33,11 +33,12 @@ namespace SMD_2_3_IS_PR1
                 {
                     Console.WriteLine();
                     number++;
-                    Console.WriteLine("Number " + number);
+                    Console.WriteLine("Number  " + number);
                     Console.WriteLine("Type:   " + inlist.type);
                     Console.WriteLine("Date:   " + inlist.date.ToString("yyyy.MM.dd"));
                     Console.WriteLine("Source: " + inlist.source);
                     Console.WriteLine("Sum:    " + inlist.sum);
+                    Console.WriteLine();
                 }
             }
 
@@ -47,7 +48,10 @@ namespace SMD_2_3_IS_PR1
             listTochka.Add(new Tochka(5.0, 4.5));
             listTochka.Add(new Tochka(15.0, 15.5));
 
-            Console.WriteLine(StrokaTochka(listTochka));
+            foreach (var item in StrokaTochka(listTochka))
+            {
+                Console.WriteLine("Точка (" + item.x + " ; " + item.y + ")");
+            }
         }
 
         static List<Tochka> StrokaTochka(List<Tochka> list)

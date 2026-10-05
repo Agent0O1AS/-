@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{CA8890EC-3E3A-C50A-EEEB-7F6439854D53}|SMD_2_3_IS_PR1\\SMD_2_3_IS_PR1.csproj|c:\\users\\asus\\desktop\\-\\smd_2_3_is_pr1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA8890EC-3E3A-C50A-EEEB-7F6439854D53}|SMD_2_3_IS_PR1\\SMD_2_3_IS_PR1.csproj|solutionrelative:smd_2_3_is_pr1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA8890EC-3E3A-C50A-EEEB-7F6439854D53}|SMD_2_3_IS_PR1\\SMD_2_3_IS_PR1.csproj|c:\\users\\asus\\desktop\\-\\smd_2_3_is_pr1\\income.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA8890EC-3E3A-C50A-EEEB-7F6439854D53}|SMD_2_3_IS_PR1\\SMD_2_3_IS_PR1.csproj|solutionrelative:smd_2_3_is_pr1\\income.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Income.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\-\\SMD_2_3_IS_PR1\\Income.cs",
+              "RelativeDocumentMoniker": "SMD_2_3_IS_PR1\\Income.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\-\\SMD_2_3_IS_PR1\\Income.cs",
+              "RelativeToolTip": "SMD_2_3_IS_PR1\\Income.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-05T12:49:56.37Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,7 +41,7 @@
               "RelativeDocumentMoniker": "SMD_2_3_IS_PR1\\Program.cs",
               "ToolTip": "C:\\Users\\ASUS\\Desktop\\-\\SMD_2_3_IS_PR1\\Program.cs",
               "RelativeToolTip": "SMD_2_3_IS_PR1\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwCMAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-05T11:53:58.262Z",
               "EditorCaption": ""
