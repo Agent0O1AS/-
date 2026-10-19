@@ -1,4 +1,9 @@
-﻿using System;
+﻿using SMD_Game_PR3;
+using SMD_2_3_IS_PR1;
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
 
 namespace SMD_2_3_IS_PR1
 {
@@ -6,40 +11,75 @@ namespace SMD_2_3_IS_PR1
     {
         static void Main()
         {
-            string line1 = "Доходы: 2024.03.15 \"Зарплата\" 50000";
+            List<IOperation> operations = new List<IOperation>();
+            Menu Menu = new Menu();
+            Menu.menuItems.Add(new MenuItem(1, "Добавить операцию"));
+            Menu.menuItems.Add(new MenuItem(2, "Список операций"));
+            Menu.menuItems.Add(new MenuItem(3, "Сохранить в файл"));
+            Menu.menuItems.Add(new MenuItem(4, "Загрузить из файла"));
+            Menu.menuItems.Add(new MenuItem(5, "Игра"));
+            Menu.menuItems.Add(new MenuItem(6, "Выход"));
 
-            List<Income> list = new List<Income>();
-            string key = "";
-            string line = "";
-            while (key != "q")
+            while (true)
             {
-                Console.Write("Введите команду: ");
-                key = Convert.ToString(Console.ReadLine());
-                if (key == "q")
+                Console.WriteLine("=== Main Menu ===");
+                foreach (MenuItem item in Menu.menuItems)
+                    Console.WriteLine(item.id + ". " + item.text);
+                Console.Write("- Введите команду: ");
+                string key = Console.ReadLine();
+
+                if (key == "6")
                 {
+                    Console.WriteLine("- Завершение работы!");
                     break;
                 }
-                Console.Write("- Введите доходы: ");
-                line = Convert.ToString(Console.ReadLine());
-
-                string[] lines = Spliter(line);
-                DateTime date = DateTime.ParseExact(lines[1], "yyyy.MM.dd", null);
-                int sum = int.Parse(lines[3]);
-
-                list.Add(new Income(lines[0], date, lines[2], sum));
-
-                int number = 0;
-                foreach (Income inlist in list)
+                else if (key == "1")
                 {
-                    Console.WriteLine();
-                    number++;
-                    Console.WriteLine("Number  " + number);
-                    Console.WriteLine("Type:   " + inlist.type);
-                    Console.WriteLine("Date:   " + inlist.date.ToString("yyyy.MM.dd"));
-                    Console.WriteLine("Source: " + inlist.source);
-                    Console.WriteLine("Sum:    " + inlist.sum);
-                    Console.WriteLine();
+                    Console.Write("- Введите строку: ");
+                    string line = Console.ReadLine(); // Доходы: 2024.03.15 "Зарплата" 50000
+
+                    string[] p = Functions.Spliter(line);
+
+                    if (p[0] == "error")
+                    {
+                        Console.WriteLine("- Ошибка: неверный формат строки.");
+                        Logger.Error("Неверный формат строки: " + line);
+                        continue;
+                    }
+
+                    DateTime date = DateTime.ParseExact(p[1], "yyyy.MM.dd", null);
+                    int sum = int.Parse(p[3]);
+
+                    IOperation op = null;
+                    if (p[0] == "Доходы") op = new Income(p[0], date, p[2], sum);
+                    else if (p[0] == "Расходы") op = new Expense(p[0], date, p[2], sum);
+
+                    if (op == null)
+                    {
+                        Console.WriteLine("- Ошибка: неизвестный тип.");
+                        Logger.Error("Неизвестный тип: " + p[0]);
+                    }
+                    else
+                    {
+                        operations.Add(op);
+                        Console.WriteLine("- Успешное добавление.");
+                    }
                 }
+                else if (key == "2") Functions.PrintOperations(operations);
+                else if (key == "3") Functions.SaveToFile(operations);
+                else if (key == "4") Functions.LoadFromFile(operations);
+                else if (key == "5")
+                {
+                    GameLauncher game = new GameLauncher();
+                    game.StartGame();
+                    Console.Clear();
+                }
+                else
+                {
+                    Console.WriteLine("- Неверная команда!");
+                    Logger.Error("Неверная команда меню: " + key);
+                }
+                Console.WriteLine();
             }
 
             Console.WriteLine();
@@ -62,40 +102,6 @@ namespace SMD_2_3_IS_PR1
                 if ((Math.Abs(5 - tochka.x)) * (Math.Abs(5 - tochka.x)) + (Math.Abs(5 - tochka.y)) * (Math.Abs(5 - tochka.y)) <= 100)
                     answer.Add(tochka);
             }
-            return answer;
-        }
-
-        static string[] Spliter(string line)
-        {
-            string[] answer = new string[4];
-
-            int x1 = line.IndexOf(':');
-            answer[0] = line.Substring(0, x1).Trim();
-
-            string line2 = line.Substring(x1 + 1).Trim();
-
-            int i = 0;
-
-            int start1 = i;
-            while (line2[i] != ' ')
-                i++;
-            answer[1] = line2.Substring(start1, i - start1);
-
-            while (line2[i] == ' ')
-                i++;
-
-            i++;
-            int start2 = i;
-            while (line2[i] != '"')
-                i++;
-            answer[2] = line2.Substring(start2, i - start2);
-            i++;
-
-            while (i < line2.Length && line2[i] == ' ')
-                i++;
-
-            answer[3] = line2.Substring(i).Trim();
-
             return answer;
         }
     }

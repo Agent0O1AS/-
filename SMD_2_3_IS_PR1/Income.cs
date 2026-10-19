@@ -1,15 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace SMD_2_3_IS_PR1
 {
-    internal class Income
+    class Income : IOperation
     {
-        public string type;
-        public DateTime date;
-        public string source;
-        public int sum;
+        public string type { get; }
+        public DateTime date { get; }
+        public string source { get; }
+        public int sum { get; }
+
         public Income(string type, DateTime date, string source, int sum)
         {
             this.type = type;

@@ -1,11 +1,30 @@
 {
   "version": 4,
   "targets": {
-    "net10.0": {}
+    "net10.0": {
+      "SMD_Game_PR3/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/SMD_Game_PR3.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SMD_Game_PR3.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "SMD_Game_PR3/1.0.0": {
+      "type": "project",
+      "path": "../SMD_Game_PR3/SMD_Game_PR3.csproj",
+      "msbuildProject": "../SMD_Game_PR3/SMD_Game_PR3.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net10.0": []
+    "net10.0": [
+      "SMD_Game_PR3 >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\ASUS\\.nuget\\packages\\": {},
@@ -40,7 +59,11 @@
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\ASUS\\Desktop\\-\\SMD_Game_PR3\\SMD_Game_PR3.csproj": {
+              "projectPath": "C:\\Users\\ASUS\\Desktop\\-\\SMD_Game_PR3\\SMD_Game_PR3.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

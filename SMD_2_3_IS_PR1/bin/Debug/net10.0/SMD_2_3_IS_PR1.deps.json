@@ -7,14 +7,30 @@
   "targets": {
     ".NETCoreApp,Version=v10.0": {
       "SMD_2_3_IS_PR1/1.0.0": {
+        "dependencies": {
+          "SMD_Game_PR3": "1.0.0"
+        },
         "runtime": {
           "SMD_2_3_IS_PR1.dll": {}
+        }
+      },
+      "SMD_Game_PR3/1.0.0": {
+        "runtime": {
+          "SMD_Game_PR3.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
   },
   "libraries": {
     "SMD_2_3_IS_PR1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SMD_Game_PR3/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
