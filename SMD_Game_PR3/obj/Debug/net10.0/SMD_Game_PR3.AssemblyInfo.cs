@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SMD_Game_PR3")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b3e5b4e213b4df6d9bcb614e80f4b5ca98fcc31")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+31a3262c04c6e76f9dd8a7b99a047f7afb82eb9b")]
 [assembly: System.Reflection.AssemblyProductAttribute("SMD_Game_PR3")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SMD_Game_PR3")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
