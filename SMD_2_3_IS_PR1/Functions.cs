@@ -13,42 +13,65 @@ namespace SMD_2_3_IS_PR1
         {
             List<string> lines = new List<string>();
             foreach (IOperation op in operations) lines.Add(op.type + ": " + op.date.ToString("yyyy.MM.dd") + " \"" + op.source + "\" " + op.sum);
-            File.WriteAllLines(FileName, lines);
-            Console.WriteLine("- Сохранено строк: " + lines.Count);
+
+            try
+            {
+                File.WriteAllLines(FileName, lines);
+                Console.WriteLine("- Сохранено строк: " + lines.Count);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("- Ошибка при сохранении файла: " + ex.Message);
+                Logger.Error("Ошибка сохранения: " + ex.Message); // пишем в лог
+            }
+            finally
+            {
+                Console.WriteLine("- Операция сохранения завершена.");
+            }
         }
 
         static public void LoadFromFile(List<IOperation> operations)
         {
-            if (!File.Exists(FileName))
+            try
             {
-                Console.WriteLine("- Файл " + FileName + " не найден.");
-                return;
+                if (!File.Exists(FileName))
+                {
+                    Console.WriteLine("- Файл " + FileName + " не найден.");
+                    return;
+                }
+
+                string[] lines = File.ReadAllLines(FileName);
+                int loaded = 0;
+
+                foreach (string line in lines)
+                {
+                    string[] p = Spliter(line);
+                    if (p[0] == "error")
+                    {
+                        Logger.Error("Битая строка в файле: " + line);
+                        continue;
+                    }
+
+                    DateTime date = DateTime.ParseExact(p[1], "yyyy.MM.dd", null);
+                    int sum = int.Parse(p[3]);
+
+                    if (p[0] == "Доходы") operations.Add(new Income(p[0], date, p[2], sum));
+                    else if (p[0] == "Расходы") operations.Add(new Expense(p[0], date, p[2], sum));
+
+                    loaded++;
+                }
+
+                Console.WriteLine("- Загружено строк: " + loaded);
             }
-
-            string[] lines = File.ReadAllLines(FileName);
-            int loaded = 0;
-
-            operations.Clear();
-
-            foreach (string line in lines)
+            catch (Exception ex)
             {
-                string[] p = Spliter(line);
-                if (p[0] == "error") continue;
-
-                DateTime date = DateTime.ParseExact(p[1], "yyyy.MM.dd", null);
-                int sum = int.Parse(p[3]);
-
-                if (p[0] == "Доходы")
-                    operations.Add(new Income(p[0], date, p[2], sum));
-                else if (p[0] == "Расходы")
-                    operations.Add(new Expense(p[0], date, p[2], sum));
-                else
-                    continue;
-
-                loaded++;
+                Console.WriteLine("- Ошибка при загрузке файла: " + ex.Message);
+                Logger.Error("Ошибка загрузки: " + ex.Message);
             }
-
-            Console.WriteLine("- Загружено строк: " + loaded);
+            finally
+            {
+                Console.WriteLine("- Операция загрузки завершена.");
+            }
         }
 
         static public void PrintOperations(List<IOperation> operations)
